@@ -1,0 +1,13 @@
+# vim ~/.bashrc
+
+source <(kubectl completion bash)  # 配置kubectl tab自动补全
+alias kd='kubectl --kubeconfig /home/ec2-user/.kube/devconfig'
+alias kt='kubectl --kubeconfig /home/ec2-user/.kube/testconfig'
+alias ku='kubectl --kubeconfig /home/ec2-user/.kube/uatconfig'
+alias kp='kubectl --kubeconfig /home/ec2-user/.kube/prdconfig'
+complete -F __start_kubectl kd  # 配置kd tab自动补全
+complete -F __start_kubectl kt  # 配置kt tab自动补全
+complete -F __start_kubectl ku  # 配置ku tab自动补全
+complete -F __start_kubectl kp  # 配置kp tab自动补全
+
+# source ~/.bashrc
